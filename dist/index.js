@@ -7,14 +7,15 @@ exports.BitManipulator = void 0;
  */
 class BitManipulator {
     /**
-     * @param {number} [initial] Optional integer for reading and setting bit values, defaults to 0.
+     * @param {number} [initial] Optional integer for reading and setting bit values.
      */
     constructor(initial = 0) {
         this.checkNumber(initial);
         this.num = initial;
     }
     /**
-     * Private function. Checks, if passed argument is an integer.
+     * @private
+     * Checks, if passed argument is an integer.
      * @param {number} num Number to check
      */
     checkIfInteger(num) {
@@ -22,7 +23,8 @@ class BitManipulator {
             throw new TypeError(`Only integers allowed. Received: ${num}`);
     }
     /**
-     * Private function. Checks, if passed argument is in acceptable range and is an integer.
+     * @private
+     * Checks, if passed argument is in acceptable range and is an integer.
      * @param {number} num Number to check
      */
     checkNumber(num) {
@@ -31,7 +33,8 @@ class BitManipulator {
             throw new RangeError(`Only values between ${BitManipulator.MIN_INT} and ${BitManipulator.MAX_INT} allowed (inclusive).`);
     }
     /**
-     * Private function. Checks, if passed argument is in acceptable range and is an integer.
+     * @private
+     * Checks, if passed argument is in acceptable range and is an integer.
      * @param {number} bit Number to check
      */
     checkBit(bit) {
@@ -58,7 +61,7 @@ class BitManipulator {
         this.num = num;
     }
     /**
-     * Sets required bit to a given value.
+     * Sets required bit to a given value. Returns nothing.
      * Bits are numbered from right to left, starting from 1, so:
      * `...100101` will be numbered: `...654321`
      * @param {number} bit Bit to be set.
@@ -75,7 +78,7 @@ class BitManipulator {
      * Gets the value of a given bit.
      * Bits are numbered from right to left, starting from 1, so:
      * `...100101` will be numbered: `...654321`
-     * @param bit Bit to read the value from.
+     * @param {number} bit Bit to read the value from.
      * @returns {boolean}
      */
     get(bit) {

@@ -10,9 +10,6 @@ Boolean values can be stored in bits from 1 to 31 (inclusive).
     * [new BitManipulator([initial])](#new_BitManipulator_new)
     * _instance_
         * [.number](#BitManipulator+number)
-        * [.checkIfInteger(num)](#BitManipulator+checkIfInteger)
-        * [.checkNumber(num)](#BitManipulator+checkNumber)
-        * [.checkBit(bit)](#BitManipulator+checkBit)
         * [.bitString([bitsToShow])](#BitManipulator+bitString) ⇒ <code>string</code>
         * [.set(bit, value)](#BitManipulator+set)
         * [.get(bit)](#BitManipulator+get) ⇒ <code>boolean</code>
@@ -28,7 +25,7 @@ Boolean values can be stored in bits from 1 to 31 (inclusive).
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [initial] | <code>number</code> | <code>0</code> | Optional integer for reading and setting bit values, defaults to 0. |
+| [initial] | <code>number</code> | <code>0</code> | Optional integer for reading and setting bit values. |
 
 <a name="BitManipulator+number"></a>
 
@@ -36,39 +33,6 @@ Boolean values can be stored in bits from 1 to 31 (inclusive).
 Integer to set and read from.
 
 **Kind**: instance property of [<code>BitManipulator</code>](#BitManipulator)  
-<a name="BitManipulator+checkIfInteger"></a>
-
-### bitManipulator.checkIfInteger(num)
-Private function. Checks, if passed argument is an integer.
-
-**Kind**: instance method of [<code>BitManipulator</code>](#BitManipulator)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| num | <code>number</code> | Number to check |
-
-<a name="BitManipulator+checkNumber"></a>
-
-### bitManipulator.checkNumber(num)
-Private function. Checks, if passed argument is in acceptable range and is an integer.
-
-**Kind**: instance method of [<code>BitManipulator</code>](#BitManipulator)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| num | <code>number</code> | Number to check |
-
-<a name="BitManipulator+checkBit"></a>
-
-### bitManipulator.checkBit(bit)
-Private function. Checks, if passed argument is in acceptable range and is an integer.
-
-**Kind**: instance method of [<code>BitManipulator</code>](#BitManipulator)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| bit | <code>number</code> | Number to check |
-
 <a name="BitManipulator+bitString"></a>
 
 ### bitManipulator.bitString([bitsToShow]) ⇒ <code>string</code>
@@ -83,7 +47,7 @@ Returns a string representation of currently stored bit.
 <a name="BitManipulator+set"></a>
 
 ### bitManipulator.set(bit, value)
-Sets required bit to a given value.
+Sets required bit to a given value. Returns nothing.
 Bits are numbered from right to left, starting from 1, so:
 `...100101` will be numbered: `...654321`
 
@@ -103,9 +67,9 @@ Bits are numbered from right to left, starting from 1, so:
 
 **Kind**: instance method of [<code>BitManipulator</code>](#BitManipulator)  
 
-| Param | Description |
-| --- | --- |
-| bit | Bit to read the value from. |
+| Param | Type | Description |
+| --- | --- | --- |
+| bit | <code>number</code> | Bit to read the value from. |
 
 <a name="BitManipulator.MAX_BIT"></a>
 

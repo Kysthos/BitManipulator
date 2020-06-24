@@ -16,7 +16,7 @@ class BitManipulator {
   private num: number;
 
   /**
-   * @param {number} [initial] Optional integer for reading and setting bit values, defaults to 0.
+   * @param {number} [initial] Optional integer for reading and setting bit values.
    */
   constructor(initial = 0) {
     this.checkNumber(initial);
@@ -24,7 +24,8 @@ class BitManipulator {
   }
 
   /**
-   * Private function. Checks, if passed argument is an integer.
+   * @private
+   * Checks, if passed argument is an integer.
    * @param {number} num Number to check
    */
   private checkIfInteger(num: number) {
@@ -33,7 +34,8 @@ class BitManipulator {
   }
 
   /**
-   * Private function. Checks, if passed argument is in acceptable range and is an integer.
+   * @private
+   * Checks, if passed argument is in acceptable range and is an integer.
    * @param {number} num Number to check
    */
   private checkNumber(num: number) {
@@ -45,7 +47,8 @@ class BitManipulator {
   }
 
   /**
-   * Private function. Checks, if passed argument is in acceptable range and is an integer.
+   * @private
+   * Checks, if passed argument is in acceptable range and is an integer.
    * @param {number} bit Number to check
    */
   private checkBit(bit: number) {
@@ -80,7 +83,7 @@ class BitManipulator {
   }
 
   /**
-   * Sets required bit to a given value.
+   * Sets required bit to a given value. Returns nothing.
    * Bits are numbered from right to left, starting from 1, so:
    * `...100101` will be numbered: `...654321`
    * @param {number} bit Bit to be set.
@@ -96,7 +99,7 @@ class BitManipulator {
    * Gets the value of a given bit.
    * Bits are numbered from right to left, starting from 1, so:
    * `...100101` will be numbered: `...654321`
-   * @param bit Bit to read the value from.
+   * @param {number} bit Bit to read the value from.
    * @returns {boolean}
    */
   get(bit: number) {
